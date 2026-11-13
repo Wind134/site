@@ -1,12 +1,18 @@
-# Wind134 产品展示站
+# Wind134 Labs 产品展示站
 
-这是托管在 GitHub Pages 上的纯静态产品网站，当前包含：
+托管在 GitHub Pages 上的纯静态网站，线上地址：<https://wind134.github.io/site/>
 
-- `/`：产品总览
-- `/tinytools/`：TinyTools 产品介绍
-- `/cliphist/`：ClipHist 产品介绍
-- `/assets/`：产品站共用样式与资源
+GitHub Pages 从 `main` 分支根目录发布（已启用 `.nojekyll`）。
 
-GitHub Pages 从 `main` 分支根目录发布。新增产品时，在根目录创建同名子目录并放置 `index.html`，再把入口加入首页即可。
+## 页面
 
-线上地址：<https://wind134.github.io/site/>
+- `/`：产品总览（MailClient、ClipHist、TinyTools）
+- `/mailclient/`：MailClient 介绍
+- `/cliphist/`：ClipHist 介绍
+- `/tinytools/`：TinyTools 介绍
+- `/assets/`：共用样式、脚本与图片
+- `/assets/screenshots/`：产品界面截图
+
+## 补充 TinyTools 截图
+
+将脱敏后的界面截图放到 `assets/screenshots/ssh-tunnel-manager.png`（可选同时提供 `.webp`）。首页与 TinyTools 产品页会自动把「截图即将更新」占位替换为实际截图，无需改 HTML。

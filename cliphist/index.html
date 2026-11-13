@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ClipHist — 复制过的，随时找回来</title>
-  <meta name="description" content="ClipHist 是一款轻量、快速、完全本地运行的跨平台剪贴板历史管理器，支持 Windows、macOS 与 Linux。">
-  <meta name="theme-color" content="#0b1828">
+  <meta name="description" content="ClipHist（My ClipHist）是一款轻量、快速、完全本地运行的跨平台剪贴板历史管理器，支持 Windows、macOS 与 Linux。">
+  <meta name="theme-color" content="#eef2f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="ClipHist — 复制过的，随时找回来">
   <meta property="og:description" content="轻量、快速、完全本地运行的跨平台剪贴板历史管理器。">
   <meta property="og:type" content="website">
@@ -18,141 +19,131 @@
   <meta name="twitter:title" content="ClipHist — 复制过的，随时找回来">
   <meta name="twitter:description" content="轻量、快速、完全本地运行的跨平台剪贴板历史管理器。">
   <meta name="twitter:image" content="https://wind134.github.io/site/cliphist/og-card.png">
+  <link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/favicon-192.png">
   <link rel="stylesheet" href="../assets/site.css">
-  <link rel="stylesheet" href="../assets/cliphist.css">
 </head>
-<body class="clip-page">
-  <header class="site-header clip-header">
+<body>
+  <a class="skip" href="#features">跳到功能</a>
+  <header class="site-header">
     <a class="wordmark" href="../" aria-label="返回 Wind134 Labs 首页">
       <span class="wordmark-mark">W</span>
       <span>Wind134 <b>Labs</b></span>
     </a>
     <nav aria-label="主导航">
       <a href="#features">功能</a>
-      <a href="#experience">体验</a>
+      <a class="nav-hide" href="#experience">体验</a>
       <a href="#download">下载</a>
       <a href="https://github.com/Wind134/cliphist" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
   <main>
-    <section class="clip-hero">
-      <div class="clip-hero-copy">
-        <div class="clip-badge"><span></span> 本地优先 · 跨平台 · 开源</div>
-        <h1>复制过的，<br><em>随时找回来。</em></h1>
-        <p>ClipHist 安静地记住文字、链接与图片。一键呼出、即时搜索、键盘直达，让剪贴板真正成为工作流的一部分。</p>
-        <div class="hero-actions">
-          <a class="button amber" href="https://github.com/Wind134/cliphist/releases" target="_blank" rel="noopener">免费下载</a>
-          <a class="button ghost" href="https://github.com/Wind134/cliphist" target="_blank" rel="noopener">查看源代码</a>
-        </div>
-        <div class="clip-meta"><span>Windows</span><span>macOS</span><span>Linux</span></div>
-      </div>
-
-      <div class="clip-app-stage" aria-label="ClipHist 应用界面示意">
-        <div class="clip-window">
-          <div class="clip-titlebar"><i></i><i></i><i></i><b>ClipHist</b><span>⌘ ,</span></div>
-          <div class="clip-toolbar">
-            <div class="clip-tabs"><b>全部</b><span>图片</span><span>文本</span><span>链接</span></div>
-            <div class="clip-search">⌕　搜索剪贴板历史… <kbd>⌘ K</kbd></div>
+    <section class="page-hero page-clip">
+      <div class="page-hero-inner">
+        <div>
+          <div class="badge"><i></i> 本地优先 · 跨平台 · 开源</div>
+          <h1>ClipHist</h1>
+          <p class="lede">My ClipHist 安静地记住文字、富文本、图片与文件列表。一键呼出、即时搜索、键盘直达，让剪贴板真正成为工作流的一部分。</p>
+          <div class="actions">
+            <a class="btn btn-clip" href="https://github.com/Wind134/cliphist/releases" target="_blank" rel="noopener">免费下载</a>
+            <a class="btn btn-ghost" href="https://github.com/Wind134/cliphist" target="_blank" rel="noopener">查看源代码</a>
           </div>
-          <div class="clip-list">
-            <article class="selected"><i>1</i><div><small>文本 · 刚刚</small><p>每一次复制，都值得被记住。</p></div><b>⌘↵</b></article>
-            <article><i>2</i><div><small>链接 · 2 分钟前</small><p>https://github.com/Wind134/cliphist</p></div><b>⌘↵</b></article>
-            <article><i>3</i><div><small>短文本 · 8 分钟前</small><p>npm run tauri dev</p></div><b>⌘↵</b></article>
-            <article><i>4</i><div><small>图片 · 12 分钟前</small><p>Screenshot 2026-08-14.png</p></div><b>⌘↵</b></article>
-          </div>
-          <div class="clip-status"><span><i></i>监听中</span><span>↑ ↓ 导航　Enter 复制</span></div>
+          <div class="meta"><span>Windows</span><span>macOS</span><span>Linux</span><span>v2.2.0</span></div>
         </div>
-        <div class="clip-float float-local">只在本机</div>
-        <div class="clip-float float-fast">毫秒级搜索</div>
+        <figure class="shot">
+          <div class="shot-frame clip-shot">
+            <a href="../assets/screenshots/cliphist.png" data-zoom aria-label="放大 ClipHist 截图">
+              <picture>
+                <source type="image/webp" srcset="../assets/screenshots/cliphist.webp">
+                <img src="../assets/screenshots/cliphist.png" width="1117" height="1678" alt="My ClipHist 设置页，版本 2.2.0。">
+              </picture>
+            </a>
+          </div>
+        </figure>
       </div>
     </section>
 
-    <section class="clip-trust">
+    <section class="trust" aria-label="产品要点">
       <div><strong>100%</strong><span>本地运行</span></div>
       <div><strong>3</strong><span>桌面平台</span></div>
       <div><strong>1–9</strong><span>数字键快速粘贴</span></div>
       <div><strong>0</strong><span>个必需云端账号</span></div>
     </section>
 
-    <section class="clip-section" id="features">
-      <div class="clip-section-head">
-        <p class="kicker">THE CLIPBOARD, UPGRADED</p>
-        <h2>不只是保存，<br>而是更快地再次使用。</h2>
+    <section class="section" id="features">
+      <div class="section-head">
+        <p class="kicker">功能</p>
+        <h2>不只是保存，而是更快地再次使用。</h2>
         <p>ClipHist 把剪贴板历史变成一个可以搜索、分类、键盘直达的工作空间。</p>
       </div>
-      <div class="clip-features">
-        <article class="clip-feature primary-feature">
-          <span class="feature-number">01</span>
+      <div class="bento">
+        <article class="card">
           <h3>复制即记录</h3>
-          <p>文字、短文本、链接、富文本与图片自动进入历史，不打断当前工作。</p>
-          <div class="type-cloud"><b>TEXT</b><b>LINK</b><b>IMAGE</b><b>RICH</b></div>
+          <p>实时监听剪贴板变化，自动记录文本、富文本、图片与文件列表，不打断当前工作。</p>
         </article>
-        <article class="clip-feature search-feature">
-          <span class="feature-number">02</span>
+        <article class="card">
           <h3>输入即找到</h3>
-          <p>即时模糊搜索配合内容分类，历史再多也能迅速收敛。</p>
-          <div class="search-demo"><span>⌕</span><b>github release</b><i>2 个结果</i></div>
+          <p>即时搜索与分类筛选，历史再多也能迅速收敛。</p>
         </article>
-        <article class="clip-feature keyboard-feature">
-          <span class="feature-number">03</span>
+        <article class="card">
           <h3>手不离键盘</h3>
-          <p>呼出、搜索、上下导航、复制与快速粘贴，全程键盘完成。</p>
-          <div class="key-demo"><kbd>Ctrl</kbd><i>+</i><kbd>Shift</kbd><i>+</i><kbd>V</kbd></div>
+          <p>全局快捷键呼出或隐藏窗口。↑ / ↓ 导航，Enter 复制，1–9 快捷粘贴对应记录。</p>
         </article>
-        <article class="clip-feature local-feature">
-          <span class="feature-number">04</span>
+        <article class="card">
           <h3>历史只属于你</h3>
-          <p>数据保存在本机，不要求注册，不上传剪贴板内容。</p>
-          <div class="local-orbit"><span>LOCAL</span><i></i><i></i><i></i></div>
+          <p>数据保存在本机，采用本地 JSON 持久化，图片外置存储。检查更新时仅访问 GitHub Releases。</p>
         </article>
       </div>
     </section>
 
-    <section class="experience-section" id="experience">
-      <div class="experience-copy">
-        <p class="kicker">KEYBOARD FIRST</p>
-        <h2>呼出之后，<br>三秒内完成粘贴。</h2>
-        <p>快捷键呼出窗口，输入关键词缩小范围，按数字或 Enter 完成操作。ClipHist 的目标不是让你管理历史，而是让历史及时出现。</p>
-        <ol>
-          <li><b>01</b><div><strong>呼出</strong><span>使用全局快捷键随时打开窗口</span></div><kbd>Ctrl ⇧ V</kbd></li>
-          <li><b>02</b><div><strong>定位</strong><span>直接输入，或使用 ↑ / ↓ 导航</span></div><kbd>↑ ↓</kbd></li>
-          <li><b>03</b><div><strong>使用</strong><span>Enter 复制，数字键快速粘贴</span></div><kbd>1 — 9</kbd></li>
-        </ol>
-      </div>
-      <div class="flow-visual" aria-hidden="true">
-        <div class="flow-ring outer"></div><div class="flow-ring inner"></div>
-        <div class="flow-core">⌘V</div>
-        <span class="flow-node flow-copy">COPY</span>
-        <span class="flow-node flow-find">FIND</span>
-        <span class="flow-node flow-paste">PASTE</span>
-      </div>
-    </section>
-
-    <section class="platform-section">
-      <div class="platform-head"><p class="kicker">ONE TOOL, THREE PLATFORMS</p><h2>熟悉的体验，带到每台电脑。</h2></div>
-      <div class="platform-grid">
-        <article><span>⊞</span><h3>Windows</h3><p>Windows 10 及以上 · 64 位</p><b>.msi　.exe</b></article>
-        <article><span>⌘</span><h3>macOS</h3><p>Intel 与 Apple Silicon</p><b>.dmg</b></article>
-        <article><span>◆</span><h3>Linux</h3><p>主流桌面发行版</p><b>.deb　.AppImage</b></article>
+    <section class="section" id="experience">
+      <p class="kicker">快捷键</p>
+      <h2>呼出之后，三步完成粘贴。</h2>
+      <p class="lede">默认使用 Ctrl+Shift+V 呼出窗口（可在设置中修改）。也可开启游戏模式，临时暂停双击修饰键唤醒。</p>
+      <div class="bento" style="margin-top:28px">
+        <article class="card">
+          <h3>01  呼出</h3>
+          <p>使用全局快捷键随时打开窗口。</p>
+        </article>
+        <article class="card">
+          <h3>02  定位</h3>
+          <p>直接输入关键词，或使用 ↑ / ↓ 导航。</p>
+        </article>
+        <article class="card wide">
+          <h3>03  使用</h3>
+          <p>Enter 复制选中项，数字键 1–9 快速粘贴对应记录，Esc 取消搜索或关闭窗口。</p>
+        </article>
       </div>
     </section>
 
-    <section class="clip-download" id="download">
-      <div class="download-aura"></div>
-      <p class="kicker">START REMEMBERING</p>
-      <h2>下一次复制，<br>不会再丢。</h2>
-      <p>开源、免费，安装后即可开始记录剪贴板历史。</p>
-      <div class="hero-actions centered">
-        <a class="button amber" href="https://github.com/Wind134/cliphist/releases" target="_blank" rel="noopener">选择你的平台</a>
-        <a class="button ghost" href="https://github.com/Wind134/cliphist/issues" target="_blank" rel="noopener">问题反馈</a>
+    <section class="section req">
+      <p class="kicker">平台</p>
+      <h2>熟悉的体验，带到每台电脑。</h2>
+      <ul>
+        <li>Windows：安装包 .exe 或 .msix</li>
+        <li>macOS（Apple Silicon）：.dmg</li>
+        <li>Linux：.deb，或 Arch 软件包 my-cliphist</li>
+        <li>桌面端使用 Flutter + Rust 构建</li>
+      </ul>
+    </section>
+
+    <section class="download" id="download">
+      <p class="kicker">开始记录</p>
+      <h2>下一次复制，不会再丢。</h2>
+      <p>开源、免费。从 GitHub Releases 下载对应平台的安装包即可。</p>
+      <div class="actions">
+        <a class="btn btn-clip" href="https://github.com/Wind134/cliphist/releases" target="_blank" rel="noopener">选择你的平台</a>
+        <a class="btn btn-ghost" href="https://github.com/Wind134/cliphist/issues" target="_blank" rel="noopener">问题反馈</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer clip-footer">
+  <footer class="site-footer">
     <a href="../">← 返回所有产品</a>
+    <a href="https://github.com/Wind134" target="_blank" rel="noopener">github.com/Wind134</a>
     <span>© 2026 Wind134 Labs · ClipHist</span>
   </footer>
+  <script src="../assets/site.js" defer></script>
 </body>
 </html>

@@ -4,24 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wind134 Labs — 简洁、可靠的桌面工具</title>
-  <meta name="description" content="Wind134 Labs 产品展示站：探索 TinyTools 与 ClipHist，让常用的系统操作更轻、更快、更可靠。">
-  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Wind134 Labs：一组开源桌面工具。MailClient 本地邮件客户端、ClipHist 剪贴板历史，以及 TinyTools（SSH 隧道、端口与文件占用）。数据留在本机。">
+  <meta name="theme-color" content="#eef2f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Wind134 Labs — 简洁、可靠的桌面工具">
-  <meta property="og:description" content="为真实工作流打造的小而专注的桌面工具。">
+  <meta property="og:description" content="MailClient、ClipHist 与 TinyTools：开源、本地、面向日常工作流的桌面工具。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wind134.github.io/site/">
   <meta property="og:image" content="https://wind134.github.io/site/assets/og-products.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Wind134 Labs — 把顺手留给你">
+  <meta property="og:image:alt" content="Wind134 Labs — 简洁、可靠的桌面工具">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Wind134 Labs — 简洁、可靠的桌面工具">
-  <meta name="twitter:description" content="为真实工作流打造的小而专注的桌面工具。">
+  <meta name="twitter:description" content="MailClient、ClipHist 与 TinyTools：开源、本地、面向日常工作流的桌面工具。">
   <meta name="twitter:image" content="https://wind134.github.io/site/assets/og-products.png">
+  <link rel="icon" href="./assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="./assets/favicon-192.png">
   <link rel="icon" href="./assets/tinytools.ico">
   <link rel="stylesheet" href="./assets/site.css">
 </head>
 <body>
+  <a class="skip" href="#products">跳到产品</a>
   <header class="site-header">
     <a class="wordmark" href="./" aria-label="Wind134 Labs 首页">
       <span class="wordmark-mark">W</span>
@@ -29,62 +33,139 @@
     </a>
     <nav aria-label="主导航">
       <a href="#products">产品</a>
+      <a class="nav-hide" href="./mailclient/">MailClient</a>
+      <a class="nav-hide" href="./cliphist/">ClipHist</a>
+      <a class="nav-hide" href="./tinytools/">TinyTools</a>
       <a href="https://github.com/Wind134" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
   <main>
-    <section class="home-hero">
-      <div class="hero-copy">
-        <p class="kicker">BUILT FOR EVERYDAY FLOW</p>
-        <h1>把复杂留在背后，<br><span>把顺手留给你。</span></h1>
-        <p class="hero-lead">一组为真实工作流打造的桌面工具。轻量、专注、数据本地保存，让每一次操作都更直接。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#products">探索产品</a>
-          <a class="button secondary" href="https://github.com/Wind134" target="_blank" rel="noopener">查看开源项目</a>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="kicker">Wind134 Labs</p>
+        <h1>简洁、可靠的<br class="break-sm">桌面工具</h1>
+        <p class="hero-lead">把复杂留在背后，把顺手留给你。一组为日常工作流打造的开源小工具。数据留在本机，由 AI 辅助编写完成。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#products">探索产品</a>
+          <a class="btn btn-ghost" href="https://github.com/Wind134" target="_blank" rel="noopener">查看开源项目</a>
         </div>
       </div>
-      <div class="hero-orbit" aria-hidden="true">
-        <div class="orbit-ring ring-one"></div>
-        <div class="orbit-ring ring-two"></div>
-        <div class="orbit-core"><span>W</span></div>
-        <div class="orbit-node node-one">SSH</div>
-        <div class="orbit-node node-two">TCP</div>
-        <div class="orbit-node node-three">⌘V</div>
-      </div>
     </section>
 
-    <section class="product-section" id="products">
-      <div class="section-heading">
-        <p class="kicker">PRODUCTS</p>
-        <h2>两款工具，两种日常效率。</h2>
-        <p>各自专注一个问题，共同坚持快速、本地与透明。</p>
-      </div>
-      <div class="product-grid">
-        <a class="product-card tinytools" href="./tinytools/">
-          <div class="product-topline"><span class="product-index">01</span><span class="platform">Windows</span></div>
-          <div class="product-icon tool-icon"><span></span><span></span><span></span><span></span></div>
-          <h3>TinyTools</h3>
-          <p>把 SSH 隧道、端口查看与文件占用定位收进一个清爽入口。</p>
-          <ul><li>SSH 隧道管理</li><li>端口与连接查看</li><li>文件/文件夹占用查询</li></ul>
-          <span class="card-link">了解 TinyTools <i>→</i></span>
-        </a>
-
-        <a class="product-card cliphist" href="./cliphist/">
-          <div class="product-topline"><span class="product-index">02</span><span class="platform">Windows · macOS · Linux</span></div>
-          <div class="product-icon clip-icon"><span></span></div>
-          <h3>ClipHist</h3>
-          <p>让复制过的文字、链接与图片随时可找，数据完全留在本机。</p>
-          <ul><li>剪贴板历史</li><li>即时搜索与分类</li><li>键盘快速粘贴</li></ul>
-          <span class="card-link">了解 ClipHist <i>→</i></span>
-        </a>
-      </div>
+    <section class="principles" aria-label="设计原则">
+      <article>
+        <h2>数据留在本地</h2>
+        <p>邮件、剪贴板与隧道配置都保存在你的电脑上。检查更新只访问公开的 GitHub Releases 接口。</p>
+      </article>
+      <article>
+        <h2>开源、可检查</h2>
+        <p>源码在 GitHub 公开。功能以仓库说明为准，不为展示而夸大能力。</p>
+      </article>
+      <article>
+        <h2>为日常而做</h2>
+        <p>收发邮件、找回复制过的内容、管理 SSH 隧道与系统占用，各自只解决一类高频问题。</p>
+      </article>
     </section>
+
+    <div id="products">
+      <section class="showcase mail" id="mailclient">
+        <div class="showcase-copy">
+          <p class="eyebrow">01  ·  Windows</p>
+          <h2>MailClient</h2>
+          <p class="lede">免费开源的 WinUI 3 桌面邮件客户端。在自己的电脑上阅读、搜索、撰写并发送 Gmail、Outlook 与 IMAP 邮件，没有开发者后台，也不上报使用数据。</p>
+          <ul class="features">
+            <li>支持 Gmail、Outlook / Microsoft 365，以及 QQ、163、126 和其他 IMAP</li>
+            <li>三栏界面：账户与文件夹、邮件列表、阅读窗格</li>
+            <li>本地搜索、草稿自动保存，已读与星标双向同步</li>
+            <li>邮件缓存在本机，凭据使用 Windows DPAPI 加密</li>
+          </ul>
+          <div class="meta"><span>WinUI 3</span><span>Windows 10 / 11</span><span>开源</span></div>
+          <div class="actions">
+            <a class="btn btn-mail" href="https://github.com/Wind134/MailClient" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://github.com/Wind134/MailClient/releases" target="_blank" rel="noopener">下载</a>
+            <a class="btn btn-ghost" href="https://wind134.github.io/MailClient/" target="_blank" rel="noopener">项目主页</a>
+            <a class="btn btn-ghost" href="https://wind134.github.io/MailClient/privacy.html" target="_blank" rel="noopener">隐私权政策</a>
+          </div>
+        </div>
+        <figure class="shot">
+          <div class="shot-frame">
+            <a href="./assets/screenshots/mailclient.png" data-zoom aria-label="放大 MailClient 截图">
+              <picture>
+                <source type="image/webp" srcset="./assets/screenshots/mailclient.webp">
+                <img src="./assets/screenshots/mailclient.png" width="1600" height="990" alt="MailClient 三栏主界面：左侧账户与文件夹、中间邮件列表、右侧阅读窗格。账号名称与邮件内容已脱敏。">
+              </picture>
+            </a>
+          </div>
+        </figure>
+      </section>
+
+      <section class="showcase clip" id="cliphist">
+        <div class="showcase-copy">
+          <p class="eyebrow">02  ·  Windows · macOS · Linux</p>
+          <h2>ClipHist</h2>
+          <p class="lede">轻量、快速的跨平台剪贴板历史管理器（My ClipHist）。复制过的文字、富文本、图片与文件列表都会被记住，需要时一键呼出、即时搜索。</p>
+          <ul class="features">
+            <li>实时监听剪贴板，自动记录文本、富文本、图片与文件列表</li>
+            <li>即时搜索与分类筛选，支持 1–9 快捷粘贴</li>
+            <li>全局快捷键呼出窗口，支持键盘导航</li>
+            <li>剪贴板数据完全保留在本地，检查更新仅访问 GitHub Releases</li>
+          </ul>
+          <div class="meta"><span>Flutter + Rust</span><span>v2.2.0</span><span>开源</span></div>
+          <div class="actions">
+            <a class="btn btn-clip" href="https://github.com/Wind134/cliphist" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://github.com/Wind134/cliphist/releases" target="_blank" rel="noopener">下载</a>
+            <a class="btn btn-ghost" href="./cliphist/">了解更多</a>
+          </div>
+        </div>
+        <figure class="shot">
+          <div class="shot-frame clip-shot">
+            <a href="./assets/screenshots/cliphist.png" data-zoom aria-label="放大 ClipHist 截图">
+              <picture>
+                <source type="image/webp" srcset="./assets/screenshots/cliphist.webp">
+                <img src="./assets/screenshots/cliphist.png" width="1117" height="1678" alt="My ClipHist 设置页：通用、界面、快捷键、数据与关于，当前版本 2.2.0。">
+              </picture>
+            </a>
+          </div>
+        </figure>
+      </section>
+
+      <section class="showcase tiny" id="tinytools">
+        <div class="showcase-copy">
+          <p class="eyebrow">03  ·  Windows</p>
+          <h2>TinyTools</h2>
+          <p class="lede">为 Windows 11 重新设计的轻量桌面工具箱，把 SSH 隧道、端口与进程查看、文件或文件夹占用定位收进同一个原生应用。</p>
+          <ul class="features">
+            <li>创建、编辑并批量启停 SSH 反向隧道，支持断线自动重连</li>
+            <li>查看端口与进程，按端口、PID 或进程名筛选</li>
+            <li>拖入文件或文件夹，定位真正的占用进程</li>
+            <li>主机地址与密码由 Windows DPAPI 加密，配置留在本地</li>
+          </ul>
+          <div class="meta"><span>WinUI 3</span><span>Windows 10 / 11</span><span>开源</span></div>
+          <div class="actions">
+            <a class="btn btn-tiny" href="https://github.com/Wind134/SSH-Tunnel-Manager" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://github.com/Wind134/SSH-Tunnel-Manager/releases" target="_blank" rel="noopener">下载</a>
+            <a class="btn btn-ghost" href="./tinytools/">了解更多</a>
+          </div>
+        </div>
+        <figure class="shot" data-screenshot="ssh-tunnel-manager" data-base="./assets/screenshots/" data-alt="TinyTools 应用界面截图。">
+          <div class="shot-frame is-placeholder">
+            <div class="shot-placeholder">
+              <div class="mark" aria-hidden="true">T</div>
+              <h3>TinyTools</h3>
+              <p>截图即将更新</p>
+            </div>
+          </div>
+        </figure>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
     <span>© 2026 Wind134 Labs</span>
+    <a href="https://github.com/Wind134" target="_blank" rel="noopener">github.com/Wind134</a>
     <span>小工具，也值得被认真设计。</span>
   </footer>
+  <script src="./assets/site.js" defer></script>
 </body>
 </html>
